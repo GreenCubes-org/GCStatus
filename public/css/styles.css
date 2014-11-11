@@ -62,3 +62,10 @@ li {
 	padding: 0em 10%;
 	margin: 1em 0em 1em;
 }
+.copyright {
+	color: #555;
+}
+
+a {
+	color: inherit !important;
+}
