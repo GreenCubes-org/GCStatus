@@ -1,4 +1,4 @@
-GreenCubes Status
+[GreenCubes Status](http://status.greencubes.org)
 ========
 
 An application for reviewing statuses of GreenCubes web-services: Site, Forum, API, Support System, Game server.
