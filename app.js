@@ -35,15 +35,6 @@ if (!cfg.userStatusException) {
 	];
 };
 
-/* Set up DB connection */
-global.gcmainconn = require('mysql').createPool({
-	host: cfg.gcmain.host,
-	database: cfg.gcmain.database,
-	user: cfg.gcmain.user,
-	password: cfg.gcmain.password
-});
-
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
