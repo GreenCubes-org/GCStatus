@@ -12,28 +12,6 @@ var app = express();
 
 global.cfg = require('./config.js');
 
-if (!cfg.userStatusException) {
-	global.cfg.userStatusException = [
-		'Drbadnick',
-		'Xitaly',
-		'Satanuga',
-		'Kunik',
-		'Panty',
-		'nzh',
-		'PoKka',
-		'Imhotep',
-		'MasterToma',
-		'Kernel',
-		'MushroomKiller',
-		'MushrO_om',
-		'tort32',
-		'Rena4ka',
-		'Feyola',
-		'MacMax',
-		'venus'
-	];
-};
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
