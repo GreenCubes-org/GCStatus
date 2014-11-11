@@ -1,0 +1,63 @@
+body {
+	height: 100%;
+	color: #333;
+	font: 13px/1.5"Clear Sans", "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0px auto;
+}
+
+.logo {
+	height: 100px;
+}
+.header {
+	margin-top: 40px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.online {
+	font-size: 2em;
+	font-weight: 400;
+	text-align: center;
+}
+
+.online-status-on {
+	color: #559A8B;
+	font-size: 1.1em;
+}
+
+.online-status-off {
+	color: #F66B65;
+	font-size: 1.1em;
+}
+
+.online-count {
+	font-size: 1.2em;
+}
+
+.players-header {
+	font-size: 2rem;
+	padding: 0px 10% 10px;
+	margin: 0;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px 10px 0px;
+}
+
+li {
+	font-size: 1rem;
+	list-style-type: none;
+	padding: 0em 10%;
+}
+
+#twitter-widget-0 {
+	width: 80% !important;
+	padding: 0em 10%;
+	margin: 1em 0em 1em;
+}

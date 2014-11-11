@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>GreenCubes Status</title>
+
+		<meta property="og:title" content="GreenCubes Status" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="<%- req.protocol + '://status.greencubes.org' + req.url %>" />
+		<meta property="og:image" content="http://help.greencubes.org/images/logo.png" />
+
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="icon" type="image/png" href="//greencubes.org/favicon.png" />
+		<link rel="stylesheet" type="text/css" href="/css/styles.css" />
+		<link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<h1 class="header">
+				<a href="/">
+					<img src="/img/logo.png" class="logo"/>
+				</a>
+			</h1>
+
+			<p class="online">Game server is <% if (obj.game.status) { %><span class="online-status-on">online</span> and <span class="online-count"><%= obj.game.online %></span> player<% if (obj.game.online > 1) { %>s<% } %> are playing<% } else { %><span class="online-status-off">offline</span><% } %> right now</p>
+
+			<p class="online">Site and Forum is <% if (obj.web.status) { %><span class="online-status-on">online</span><% } else { %><span class="online-status-off">offline</span><% } %></p>
+
+			<p class="online">API server is <% if (obj.api.status) { %><span class="online-status-on">online</span><% } else { %><span class="online-status-off">offline</span><% } %></p>
+
+			<p class="online">Support system is <% if (obj.help.status) { %><span class="online-status-on">online</span><% } else { %><span class="online-status-off">offline</span><% } %></p>
+
+			<br>
+			<a class="twitter-timeline"  href="https://twitter.com/green_cubes" data-widget-id="532149717052841984">Tweets by @green_cubes</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+		</div>
+	</body>
+</html>
