@@ -5,16 +5,17 @@ body {
 }
 
 .container {
-	max-width: 800px;
+	max-width: 600px;
 	margin: 0px auto;
+	color: #fff;
 }
 
 .logo {
-	height: 100px;
+	height: 120px;
+	margin-top: 0.5em;
 }
 .header {
-	margin-top: 40px;
-	margin-bottom: 10px;
+	margin-top: 1em;
 	overflow: hidden;
 	text-align: center;
 }
@@ -22,18 +23,8 @@ body {
 .online {
 	font-size: 2em;
 	font-weight: 400;
-	text-align: center;
-	margin: 10px;
-}
-
-.online-status-on {
-	color: #559A8B;
-	font-size: 1.1em;
-}
-
-.online-status-off {
-	color: #F66B65;
-	font-size: 1.1em;
+	margin: 0;
+	padding: 0.2em 1em;
 }
 
 .online-count {
@@ -60,12 +51,39 @@ li {
 #twitter-widget-0 {
 	width: 80% !important;
 	padding: 0em 10%;
-	margin: 1em 0em 1em;
+	margin: 1em 0em 0em;
 }
-.copyright {
-	color: #555;
-}
+
 
 a {
 	color: inherit !important;
+}
+
+.block {
+	width: 100%;
+	background-color: #559A8B;
+}
+
+.block.offline {
+	background-color: #F66B65;
+}
+
+.right {
+	float: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.description {
+	font-size: 1.3rem;
+	margin: 0em 1.3em;
+	padding-bottom: 0.5em;
+}
+
+.copyright {
+	padding: 1em 40px;
+	font-size: 1.3em;
+	margin: 0em 0em 1em;
 }
