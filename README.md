@@ -10,13 +10,10 @@ Written in Node.js with Express.js.
 * MySQL
 
 ## Installation
-1. ```bash 
-git clone https://github.com/GreenCubes/GCStatus.git && npm install```
-2. ```bash 
-cp config.example.js config.js && nano config.js```
+1. ```git clone https://github.com/GreenCubes/GCStatus.git && npm install```
+2. ```cp config.example.js config.js && nano config.js```
 3. Set up [crontab](https://en.wikipedia.org/wiki/Cron) for ```node bin/getstatus```
-4. ```bash 
-node bin/www```
+4. ```node bin/www```
 5. ```???```
 6. ```PROFIT```
 
