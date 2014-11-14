@@ -119,3 +119,10 @@ a {
     src: url(/font/Forum.eot);
     src: url(/font/Forum.ttf);
 }
+
+.lastupdate {
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0;
+	padding: 1em 2em;
+}

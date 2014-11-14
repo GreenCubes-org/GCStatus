@@ -3,6 +3,7 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mysql = require('mysql');
 
 var routes = require('./routes/index');
 
@@ -11,6 +12,17 @@ var app = express();
 /* Set up config */
 
 global.cfg = require('./config.js');
+
+
+/* Set up database connection */
+
+global.appdbconn = require('mysql').createPool({
+	host: cfg.appdb.host,
+	database: cfg.appdb.database,
+	user: cfg.appdb.user,
+	password: cfg.appdb.password
+});
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

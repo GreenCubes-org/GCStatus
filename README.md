@@ -5,6 +5,21 @@ An application for reviewing statuses of GreenCubes web-services: Site, Forum, A
 
 Written in Node.js with Express.js.
 
+## Dependencies
+* Node
+* MySQL
+
+## Installation
+1. ```bash 
+git clone https://github.com/GreenCubes/GCStatus.git && npm install```
+2. ```bash 
+cp config.example.js config.js && nano config.js```
+3. Set up [crontab](https://en.wikipedia.org/wiki/Cron) for ```node bin/getstatus```
+4. ```bash 
+node bin/www```
+5. ```???```
+6. ```PROFIT```
+
 ## Copyright note
 Copyright (c) 2014 GreenCubes. See the LICENSE file for license rights and limitations (MIT).
 
