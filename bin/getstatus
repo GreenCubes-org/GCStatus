@@ -197,6 +197,14 @@ async.waterfall([
 			
 			callback(null, obj);
 		});
+	},
+	function removeExtraData(obj, callback) {
+		// 2629743 – human/Earth month
+		appdbconn.query('DELETE FROM `statuses` WHERE UNIX_TIMESTAMP() - UNIX_TIMESTAMP(`createdAt`) > 2629743', function (err, result) {
+			if (err) return callback(err);
+			
+			callback(null, obj);
+		});
 	}
 ], function (err, obj) {
 	if (err) throw err;
