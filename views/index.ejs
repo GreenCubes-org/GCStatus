@@ -30,7 +30,7 @@
 			
 				<p class="online">Game server <span class="right <%= (obj.main.status) ? 'on' : 'off' %>"><% if (obj.main.status) { %>online <small title="<%= obj.main.online %> players on server right now">(<%= obj.main.online %>)<% } else { %>offline<% } %></small></span></p>
 			
-				<p class="online">Site and Forum <span class="right <%= (obj.web.status) ? 'on' : 'off' %>"><% if (obj.web.status) { %>online<% } else { %>offline<% } %></span></p>
+				<p class="online">Web server <span class="small">(site, forum, wiki)</span> <span class="right <%= (obj.web.status) ? 'on' : 'off' %>"><% if (obj.web.status) { %>online<% } else { %>offline<% } %></span></p>
 			
 				<p class="online">API server <span class="right <%= (obj.api.status) ? 'on' : 'off' %>"><% if (obj.api.status) { %>online<% } else { %>offline<% } %></span></p>
 			
