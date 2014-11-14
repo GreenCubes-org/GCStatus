@@ -1,7 +1,9 @@
 body {
 	height: 100%;
-	color: #333;
-	font: 13px/1.5"Clear Sans", "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #D2D4D8;
+	font-size: 17px;
+	font-family: "Forum";
+	background-color: #090E13;
 }
 
 .container {
@@ -61,11 +63,18 @@ a {
 
 .block {
 	width: 100%;
-	background-color: #559A8B;
+	margin: 0px auto;
+	background-image: url('/img/background.png');
+	background-position: center top;
+	background-repeat: repeat-y;
+	}
+
+.right.on {
+	color: #559A8B;
 }
 
-.block.offline {
-	background-color: #F66B65;
+.right.off {
+	color: #F66B65;
 }
 
 .right {
@@ -86,4 +95,27 @@ a {
 	padding: 1em 40px;
 	font-size: 1.3em;
 	margin: 0em 0em 1em;
+}
+
+#top {
+    margin: 0px -28px -34px;
+    width: 655px;
+    height: 12px;
+    background-image: url('/img/top.png');
+    background-posiуtion: center top;
+    background-repeat: no-repeat;
+}
+
+#fade {
+	background-image: url('/img/eof.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	height: 25px;
+	width: 600px;
+}
+
+@font-face {
+    font-family: Forum;
+    src: url(/font/Forum.eot);
+    src: url(/font/Forum.ttf);
 }

@@ -18,6 +18,7 @@
 
 	<body>
 		<div class="container">
+			<div id="top"></div>
 			<div class="block">
 				<h1 class="header">
 					<a href="/">
@@ -26,31 +27,20 @@
 				</h1>
 				<h1 class="center">GreenCubes Status</h1>
 				<p class="description">This page contains current status of major GreenCubes services.</p>
-			</div>
-
-			<div class="block <%= (!obj.game.status) ? 'offline' : '' %>">
-				<p class="online">Game server <span class="right"><% if (obj.game.status) { %>online <small>(<%= obj.game.online %>)<% } else { %>offline<% } %></small></span></p>
-			</div>
 			
-			<div class="block <%= (!obj.web.status) ? 'offline' : '' %>">
-				<p class="online">Site and Forum <span class="right"><% if (obj.web.status) { %>online<% } else { %>offline<% } %></span></p>
-			</div>
+				<p class="online">Game server <span class="right <%= (obj.game.status) ? 'on' : 'off' %>"><% if (obj.game.status) { %>online <small>(<%= obj.game.online %>)<% } else { %>offline<% } %></small></span></p>
 			
-			<div class="block <%= (!obj.api.status) ? 'offline' : '' %>">
-				<p class="online">API server <span class="right"><% if (obj.api.status) { %>online<% } else { %>offline<% } %></span></p>
-			</div>
+				<p class="online">Site and Forum <span class="right <%= (obj.web.status) ? 'on' : 'off' %>"><% if (obj.web.status) { %>online<% } else { %>offline<% } %></span></p>
 			
-			<div class="block <%= (!obj.help.status) ? 'offline' : '' %>">
-				<p class="online">Support system <span class="right"><% if (obj.help.status) { %>online<% } else { %>offline<% } %></span></p>
-			</div>
+				<p class="online">API server <span class="right <%= (obj.api.status) ? 'on' : 'off' %>"><% if (obj.api.status) { %>online<% } else { %>offline<% } %></span></p>
 			
-			<div class="block">
+				<p class="online">Support system <span class="right <%= (obj.help.status) ? 'on' : 'off' %>"><% if (obj.help.status) { %>online<% } else { %>offline<% } %></span></p>
+			
 				<a class="twitter-timeline"  href="https://twitter.com/green_cubes" data-widget-id="532149717052841984">Tweets by @green_cubes</a>
 				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-			</div>
-
-			<div class="block">
+			
 				<p class="copyright">GreenCubes 2014 &copy; | <a href="http://github.com/GreenCubes/GCStatus">GitHub</a> | <a href="http://kern0.ru">Kern0</a></p>
+				<div id="fade"></div>
 			</div>
 
 		</div>
