@@ -10,15 +10,15 @@ Written in Node.js with Express.js.
 * MySQL
 
 ## Installation
-1. Clone repo, move to new directory and install node modules:
+1. Clone repo, move to new directory and install node modules: <br>
 ```git clone https://github.com/GreenCubes/GCStatus.git && cd GCStatus && npm install``` 
-2. Import MySQL database:
+2. Import MySQL database: <br>
 ```mysql -u username -p database_name < db.sql```
-3. Create config file and open it with ```nano``` (you can replace it with your favourite editor):
+3. Create config file and open it with ```nano``` (you can replace it with your favourite editor): <br>
 ```cp config.example.js config.js && nano config.js```
-4. Set up [crontab](https://en.wikipedia.org/wiki/Cron) for ```node bin/getstatus```
+4. Set up [crontab](https://en.wikipedia.org/wiki/Cron) for ```node bin/getstatus``` <br>
 Nope, google it yourself
-5. Start up our application:
+5. Start up our application: <br>
 ```node bin/www```
 6. ???
 7. PROFIT
