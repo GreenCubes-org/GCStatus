@@ -8,5 +8,6 @@ Written in Node.js with Express.js.
 ## Copyright note
 Copyright (c) 2014 GreenCubes. See the LICENSE file for license rights and limitations (MIT).
 
-## Author
-[Arseniy Maximov](http://kern0.ru) aka (Kern0)
+## Authors
+Kern0 aka [Arseniy Maximov](http://kern0.ru) – Code, UI.
+MushroomKiller aka Sergey Tsvetkov – Design assets.
