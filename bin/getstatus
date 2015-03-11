@@ -9,7 +9,8 @@ console.time('Processed in');
 
 /* Set up config */
 
-var cfg = require('../config.js');
+var appConfig = require('../config.js'),
+    exampleAppConfig = require('../config.example.js');
 
 
 /* Set up database connection */
@@ -77,10 +78,36 @@ var obj = {
 	help: {
 		status: null
 	},
+	dev: {
+		status: null
+	},
 	main: {
 		status: null,
 		online: null
 	}
+};
+
+var cfg = {
+    main: {
+        host: (appConfig.srv.main) ? appConfig.srv.main.host : exampleAppConfig.srv.main.host,
+        port: (appConfig.srv.main) ? appConfig.srv.main.port : exampleAppConfig.srv.main.port
+    },
+    api: {
+        host: (appConfig.srv.api) ? appConfig.srv.api.host : exampleAppConfig.srv.api.host,
+        port: (appConfig.srv.api) ? appConfig.srv.api.port : exampleAppConfig.srv.api.port
+    },
+    help: {
+        host: (appConfig.srv.help) ? appConfig.srv.help.host : exampleAppConfig.srv.help.host,
+        port: (appConfig.srv.help) ? appConfig.srv.help.port : exampleAppConfig.srv.help.port
+    },
+    dev: {
+        host: (appConfig.srv.dev) ? appConfig.srv.dev.host : exampleAppConfig.srv.dev.host,
+        port: (appConfig.srv.dev) ? appConfig.srv.dev.port : exampleAppConfig.srv.dev.port
+    },
+    web: {
+        host: (appConfig.srv.web) ? appConfig.srv.web.host : exampleAppConfig.srv.web.host,
+        port: (appConfig.srv.web) ? appConfig.srv.web.port : exampleAppConfig.srv.web.port
+    }
 };
 
 /* Main logic */
@@ -114,6 +141,16 @@ async.waterfall([
 			host: cfg.srv.help.host
 		}, function (status) {
 			obj.help.status = status;
+
+			callback(null, obj);
+		});
+	},
+	function getDevPanelStatus(obj, callback) {
+		sendRequest({
+			port: cfg.srv.dev.port,
+			host: cfg.srv.dev.host
+		}, function (status) {
+			obj.dev.status = status;
 
 			callback(null, obj);
 		});
@@ -188,11 +225,12 @@ async.waterfall([
 		obj.web.status = Number(obj.web.status);
 		obj.api.status = Number(obj.api.status);
 		obj.help.status = Number(obj.help.status);
+		obj.dev.status = Number(obj.help.status);
 		
 		callback(null, obj);
 	},
 	function putDataToDB(obj, callback) {
-		appdbconn.query('INSERT INTO `statuses` (`id`, `main_status`, `main_online`, `web_status`, `api_status`, `help_status`, `createdAt`) VALUES (NULL, "' + obj.main.status + '", "' + obj.main.online + '", "' + obj.web.status + '", "' + obj.api.status + '", "' + obj.help.status + '", CURRENT_TIMESTAMP);', function (err, result) {
+		appdbconn.query('INSERT INTO `statuses` (`id`, `main_status`, `main_online`, `web_status`, `api_status`, `help_status`, `dev_status`, `createdAt`) VALUES (NULL, "' + obj.main.status + '", "' + obj.main.online + '", "' + obj.web.status + '", "' + obj.api.status + '", "' + obj.help.status + "," + obj.dev.status + '", CURRENT_TIMESTAMP);', function (err, result) {
 			if (err) return callback(err);
 			
 			callback(null, obj);

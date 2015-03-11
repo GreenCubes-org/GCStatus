@@ -13,6 +13,10 @@ module.exports = {
 			host: 'help.greencubes.org',
 			port: 443
 		},
+		dev: {
+			host: 'dev.greencubes.org',
+			port: 443
+		},
 		web: {
 			host: 'greencubes.org',
 			port: 443
