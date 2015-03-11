@@ -1,3 +1,9 @@
+@font-face {
+    font-family: Forum;
+    src: url(/fonts/Forum.ttf);
+    src: url(/fonts/Forum-Regular.otf);
+}
+
 body {
 	height: 100%;
 	color: #D2D4D8;
