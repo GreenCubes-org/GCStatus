@@ -18,10 +18,10 @@ var appConfig = require('../config.js'),
 console.log('Init database connection');
 
 var appdbconn = mysql.createConnection({
-	host: cfg.appdb.host,
-	database: cfg.appdb.database,
-	user: cfg.appdb.user,
-	password: cfg.appdb.password
+	host: appConfig.appdb.host,
+	database: appConfig.appdb.database,
+	user: appConfig.appdb.user,
+	password: appConfig.appdb.password
 });
 
 appdbconn.connect();
@@ -117,8 +117,8 @@ console.log('Process logic...');
 async.waterfall([
 	function getWebServerStatus(callback) {
 		sendRequest({
-			port: cfg.srv.web.port,
-			host: cfg.srv.web.host
+			port: cfg.web.port,
+			host: cfg.web.host
 		}, function (status) {
 			obj.web.status = status;
 
@@ -127,8 +127,8 @@ async.waterfall([
 	},
 	function getAPIServerStatus(obj, callback) {
 		sendRequest({
-			port: cfg.srv.api.port,
-			host: cfg.srv.api.host
+			port: cfg.api.port,
+			host: cfg.api.host
 		}, function (status) {
 			obj.api.status = status;
 
@@ -137,8 +137,8 @@ async.waterfall([
 	},
 	function getSupportSystemStatus(obj, callback) {
 		sendRequest({
-			port: cfg.srv.help.port,
-			host: cfg.srv.help.host
+			port: cfg.help.port,
+			host: cfg.help.host
 		}, function (status) {
 			obj.help.status = status;
 
@@ -147,8 +147,8 @@ async.waterfall([
 	},
 	function getDevPanelStatus(obj, callback) {
 		sendRequest({
-			port: cfg.srv.dev.port,
-			host: cfg.srv.dev.host
+			port: cfg.dev.port,
+			host: cfg.dev.host
 		}, function (status) {
 			obj.dev.status = status;
 
@@ -157,8 +157,8 @@ async.waterfall([
 	},
 	function getGameServerStatus(obj, callback) {
 		var socket = net.connect({
-			port: cfg.srv.main.port,
-			host: cfg.srv.main.host
+			port: cfg.main.port,
+			host: cfg.main.host
 		}, function() {
 			buf = new Buffer(2);
 			buf[0] = 254;
