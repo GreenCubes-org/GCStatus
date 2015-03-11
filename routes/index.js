@@ -27,6 +27,9 @@ router.get('/', function (req, res) {
 				help: {
 					status: result.help_status
 				},
+				dev: {
+					status: result.dev_status
+				},
 				main: {
 					status: result.main_status,
 					online: result.main_online
