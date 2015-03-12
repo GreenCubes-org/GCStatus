@@ -63,7 +63,8 @@ li {
 .widget #twitter-widget-0 {
 	width: 80% !important;
 	padding: 0em 10%;
-	margin: 1em auto 0em;
+	margin: 1em auto 0em !important;
+    display: block !important;
 }
 
 
