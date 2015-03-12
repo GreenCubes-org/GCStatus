@@ -230,7 +230,7 @@ async.waterfall([
 		callback(null, obj);
 	},
 	function putDataToDB(obj, callback) {
-		appdbconn.query('INSERT INTO `statuses` (`id`, `main_status`, `main_online`, `web_status`, `api_status`, `help_status`, `dev_status`, `createdAt`) VALUES (NULL, "' + obj.main.status + '", "' + obj.main.online + '", "' + obj.web.status + '", "' + obj.api.status + '", "' + obj.help.status + "," + obj.dev.status + '", CURRENT_TIMESTAMP);', function (err, result) {
+		appdbconn.query('INSERT INTO `statuses` (`id`, `main_status`, `main_online`, `web_status`, `api_status`, `help_status`, `dev_status`, `createdAt`) VALUES (NULL, "' + obj.main.status + '", "' + obj.main.online + '", "' + obj.web.status + '", "' + obj.api.status + '", "' + obj.help.status + '","' + obj.dev.status + '", CURRENT_TIMESTAMP);', function (err, result) {
 			if (err) return callback(err);
 			
 			callback(null, obj);
