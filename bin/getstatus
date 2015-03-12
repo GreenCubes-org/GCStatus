@@ -225,7 +225,7 @@ async.waterfall([
 		obj.web.status = Number(obj.web.status);
 		obj.api.status = Number(obj.api.status);
 		obj.help.status = Number(obj.help.status);
-		obj.dev.status = Number(obj.help.status);
+		obj.dev.status = Number(obj.dev.status);
 		
 		callback(null, obj);
 	},
