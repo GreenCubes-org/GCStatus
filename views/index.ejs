@@ -27,24 +27,24 @@
 				</h1>
 				<h1 class="center">GreenCubes Status</h1>
 				<p class="description">This page contains current status of major GreenCubes services.</p>
-			
+
 				<p class="online">Game server <span class="right <%= (obj.main.status) ? 'on' : 'off' %>"><% if (obj.main.status) { %>online <small title="<%= obj.main.online %> players on server right now">(<%= obj.main.online %>)<% } else { %>offline<% } %></small></span></p>
-			
+
 				<p class="online">Web server <span class="small">(site, forum, wiki)</span> <span class="right <%= (obj.web.status) ? 'on' : 'off' %>"><% if (obj.web.status) { %>online<% } else { %>offline<% } %></span></p>
-			
+
 				<p class="online">API server <span class="right <%= (obj.api.status) ? 'on' : 'off' %>"><% if (obj.api.status) { %>online<% } else { %>offline<% } %></span></p>
-			
+
 				<p class="online">Support system <span class="right <%= (obj.help.status) ? 'on' : 'off' %>"><% if (obj.help.status) { %>online<% } else { %>offline<% } %></span></p>
 
 				<p class="online">Developer section <span class="right <%= (obj.dev.status) ? 'on' : 'off' %>"><% if (obj.dev.status) { %>online<% } else { %>offline<% } %></span></p>
-				
+
 				<p class="lastupdate">Last update was <%= obj.createdAt %></p>
-			
+
 				<div class="widget"><a class="twitter-timeline"  href="https://twitter.com/green_cubes" data-widget-id="533239860723601409">Tweets by @green_cubes</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
-          
-			
-				<p class="copyright">GreenCubes 2014 &copy; | <a href="http://github.com/GreenCubes/GCStatus">GitHub</a> | <a href="http://kern0.ru">Kern0</a> & MushroomKiller</p>
+
+
+				<p class="copyright">GreenCubes 2015 &copy; | <a href="http://github.com/GreenCubes/GCStatus">GitHub</a> | <a href="http://kern0.ru">Kern0</a> & MushroomKiller</p>
 				<div id="fade"></div>
 			</div>
 
